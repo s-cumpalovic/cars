@@ -28,9 +28,7 @@ Route::get('about', function () {
 
 // Route::get('/cars', [CarsController::class, 'index']);
 
-Route::get('/cars', function () {
-    $cars = Car::all();
-    // $cars = [0, 1, 2, 3];
-    return view('cars', compact('cars'));
-});
+Route::get('/cars', [CarsController::class, 'index']);
+
+Route::get('/car{id}', [CarsController::class, 'show'])->name('single-car-route');
 

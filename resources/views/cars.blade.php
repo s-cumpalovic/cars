@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    {{-- @dd($cars); --}}
-    <h2>Models of cars currently available</h2>
+    <h2>Models of cars currently available:</h2><br><br>
     @foreach($cars as $car)
-    <h3>
-        Model: {{$car->title}}
-        Produced by: {{$car->producer}}
-    </h3>
+        <a href="{{ route('single-car-route', ['id' => $car->id]) }}">
+            Model: {{$car->title}}
+        <a>
+            Produced by: {{$car->producer}}
+            <br><br><hr>
     @endforeach
 </body>
 </html>
