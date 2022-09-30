@@ -55,7 +55,8 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Welcome to Cars Project
+                                    <h2>Welcome, my name is {{$name}}</h2>
+                                    <p><u>I'm a {{$age}} old web developer.</u></p>
                                 </div>
                             </div>
                         </div>
