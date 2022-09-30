@@ -9,11 +9,11 @@ class CarsController extends Controller
 {
     public function index() {
         $cars = Car::all();
-        return view('/cars', compact('cars'));
+        return view('cars.cars', compact('cars'));
     }
 
     public function show($id) {
         $singleCar = Car::find($id);
-        return view('single-car', compact('singleCar'));
+        return view('cars.single-car', compact('singleCar'));
     }
 }
