@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CarsController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Car;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +22,15 @@ Route::get('/', function () {
     return view('welcome', compact('name', 'age'));
 });
 
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('about');
 });
+
+// Route::get('/cars', [CarsController::class, 'index']);
+
+Route::get('/cars', function () {
+    $cars = Car::all();
+    // $cars = [0, 1, 2, 3];
+    return view('cars', compact('cars'));
+});
+
